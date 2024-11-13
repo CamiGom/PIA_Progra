@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebaseApp.Views.Reseñas.ReseñasList"
+             Title="Reseñas">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Agregar +"
+                     x:Name="AddToolBarItem"
+                     Clicked="AddToolBarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Buscar"
+                       x:Name="TxtSearch"
+                       TextChanged="TxtSearch_TextChanged"
+                       SearchButtonPressed="TxtSearch_SearchButtonPressed"></SearchBar>
+            <ListView x:Name="StudentListView" 
+                  ItemsSource="{Binding students}"
+                  HasUnevenRows="True"
+                  ItemTapped="StudentListView_ItemTapped"                  
+                  IsRefreshing="True"
+                  IsPullToRefreshEnabled="True"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--<ViewCell.ContextActions>
+                                <MenuItem Text="Edit"
+                                          x:Name="EditMenuItem"
+                                          CommandParameter="{Binding Id}"
+                                          Clicked="EditMenuItem_Clicked"></MenuItem>
+                                <MenuItem Text="Delete"
+                                          x:Name="DeleteMenuItem"
+                                          CommandParameter="{Binding Id}"
+                                          Clicked="DeleteMenuItem_Clicked"></MenuItem>
+                            </ViewCell.ContextActions>-->
+                            <SwipeView>
+                                <SwipeView.LeftItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="EDITAR" BackgroundColor="Yellow"
+                                                   x:Name="EditSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                   Invoked="EditSwipeItem_Invoked"></SwipeItem>
+                                        <SwipeItem Text="BORRAR" BackgroundColor="Red" CommandParameter="{Binding Id}"
+                                                   x:Name="DeleteSwipeItem"
+                                                   Invoked="DeleteMenuItem_Clicked"></SwipeItem>
+                                    </SwipeItems>
+                                </SwipeView.LeftItems>
+
+                                <StackLayout Orientation="Horizontal" Padding="15">
+
+                                    <StackLayout Padding="10" HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding Name}" 
+               FontSize="Medium" 
+               FontAttributes="Bold" 
+               TextColor="#6A1B9A" />
+                                        <!-- Texto en negritas y morado -->
+
+                                        <Label Text="{Binding Plataforma}" 
+               FontSize="Small" 
+               TextColor="Gray" 
+               Margin="0,5,0,0" />
+                                        <!-- Segundo Label con texto en gris y margen superior -->
+                                    </StackLayout>
+
+                                    <Button Text="Ver Reseña" 
+            BackgroundColor="#6A1B9A" 
+            TextColor="White" 
+            FontAttributes="Bold" 
+            CornerRadius="20" 
+            Padding="10,5"
+            HorizontalOptions="End" 
+            VerticalOptions="Center" />
+                                </StackLayout>
+                            </SwipeView>
+                           
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebaseApp.Views.Reseñas.ReseñaEntry">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <!-- StackLayout con el Label "Agregar reseña" -->
+
+                <StackLayout>
+                    <Frame HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" Padding="0" HasShadow="False" BackgroundColor="Transparent">
+                        <Image Source="https://invitenow.digital/wp-content/uploads/2024/11/add.png" Aspect="AspectFill"/>
+                    </Frame>
+                </StackLayout>
+                
+                <StackLayout Padding="15">
+                    <Label Text="Agregar reseña"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Center"
+                        FontSize="Large"
+                        FontAttributes="Bold"
+                        TextColor="#6A1B9A"/>
+                    <!-- Color morado para el texto -->
+                </StackLayout>
+
+                <!-- Resto del contenido -->
+                <StackLayout>
+                    <Frame BackgroundColor="#F3E5F5" BorderColor="#6A1B9A" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry x:Name="TxtName" Placeholder="Nombre de la película" 
+                                   TextColor="#6A1B9A" 
+                                   PlaceholderColor="#9C27B0" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   Margin="0, 0, 15, 0"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout></StackLayout>
+
+                <StackLayout>
+                    <Frame BackgroundColor="#F3E5F5" BorderColor="#6A1B9A" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry x:Name="TxtPlataforma" Placeholder="Plataforma"  
+                                   TextColor="#6A1B9A" 
+                                   PlaceholderColor="#9C27B0" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   Margin="0, 0, 15, 0"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout></StackLayout>
+
+                <StackLayout>
+                    <Frame BackgroundColor="#F3E5F5" BorderColor="#6A1B9A" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry x:Name="TxtHoras" Placeholder="Tiempo"  
+                                   TextColor="#6A1B9A" 
+                                   PlaceholderColor="#9C27B0" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   Margin="0, 0, 15, 0"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout></StackLayout>
+
+                <StackLayout>
+                    <Frame BackgroundColor="#F3E5F5" BorderColor="#6A1B9A" Padding="0" Margin="0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Entry x:Name="TxtDesc" Placeholder="Reseña"  
+                                   TextColor="#6A1B9A" 
+                                   PlaceholderColor="#9C27B0" 
+                                   HorizontalOptions="FillAndExpand" 
+                                   Margin="0, 0, 15, 0"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout></StackLayout>
+
+                <StackLayout>
+                    <Button x:Name="ButtonSave" Clicked="ButtonSave_Clicked" Text="Guardar" 
+                            BackgroundColor="#6A1B9A" TextColor="White" FontAttributes="Bold" 
+                            CornerRadius="20" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

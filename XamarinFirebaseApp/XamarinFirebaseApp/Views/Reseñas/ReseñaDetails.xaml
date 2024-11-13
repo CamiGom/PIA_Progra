@@ -1,0 +1,77 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFirebaseApp.Views.Reseñas.ReseñaDetails">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="16">
+                <!-- Título de la página -->
+                <Label Text="Datos de reseña"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center"
+                       FontSize="Large"
+                       TextColor="#7E57C2" />
+                <!-- Morado -->
+
+                <StackLayout></StackLayout>
+                <StackLayout></StackLayout>
+                <StackLayout></StackLayout>
+
+                <!-- Nombre de la película -->
+                <Label Text="Nombre de pelicula:"
+                       FontAttributes="Bold"  
+                       FontSize="Medium" 
+                       Margin="10"
+                       TextColor="#512DA8" />
+                <!-- Morado oscuro -->
+                <Frame BackgroundColor="#D1C4E9" CornerRadius="10" Margin="0,10,0,0">
+                    <Label x:Name="LabelName" FontSize="Small" Margin="10" TextColor="#512DA8" />
+                </Frame>
+
+                <!-- Plataforma -->
+                <Label Text="Plataforma:"  
+                       FontAttributes="Bold" 
+                       FontSize="Medium" 
+                       Margin="10"
+                       TextColor="#512DA8" />
+                <!-- Morado oscuro -->
+                <Frame BackgroundColor="#B39DDB" CornerRadius="10" Margin="0,10,0,0">
+                    <Label x:Name="LabelPlataforma" FontSize="Small" Margin="10" TextColor="#512DA8" />
+                </Frame>
+
+                <!-- Tiempo -->
+                <Label Text="Tiempo (minutos):" 
+                       FontAttributes="Bold"  
+                       FontSize="Medium" 
+                       Margin="10"
+                       TextColor="#512DA8" />
+                <!-- Morado oscuro -->
+                <Frame BackgroundColor="#E1BEE7" CornerRadius="10" Margin="0,10,0,0">
+                    <Label x:Name="LabelHoras" FontSize="Small" Margin="10" TextColor="#512DA8" />
+                </Frame>
+
+                <!-- Reseña -->
+                <Label Text="Reseña:" 
+                       FontAttributes="Bold" 
+                       FontSize="Medium" 
+                       Margin="10"
+                       TextColor="#512DA8" />
+                <!-- Morado oscuro -->
+                <Frame BackgroundColor="#CE93D8" CornerRadius="10" Margin="0,10,0,0">
+                    <Label x:Name="LabelDesc" FontSize="Small" Margin="10" TextColor="#512DA8" />
+                </Frame>
+
+                <!-- Reseña -->
+                <Label Text="Reseña por:" 
+       FontAttributes="Bold" 
+       FontSize="Medium" 
+       Margin="10"
+       TextColor="#512DA8" />
+                <!-- Morado oscuro -->
+                <Frame BackgroundColor="#CE93D8" CornerRadius="10" Margin="0,10,0,0">
+                    <Label x:Name="LabelUser" FontSize="Small" Margin="10" TextColor="white" />
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
